@@ -25,7 +25,7 @@ Add your API key from [app.reqres.in](https://app.reqres.in/api-keys) to:
 - `api-tests/test_get_users.py` → `API_KEY = "..."`
 - `api-tests/test_post_user.py` → `API_KEY = "..."`
 
-## Running Tests
+## Running Tests (locally)
 
 ```bash
 # All tests
