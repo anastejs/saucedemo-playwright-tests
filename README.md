@@ -6,7 +6,7 @@ Automated tests for [saucedemo.com](https://www.saucedemo.com/) (UI) and [reqres
 
 ```bash
 # Clone the repository
-git clone git clone <your-repo-url>
+git clone https://github.com/anastejs/saucedemo-playwright-tests.git
 cd saucedemo-playwright-tests
 
 # Create and activate virtual environment
