@@ -40,3 +40,10 @@ pytest api-tests/ -v
 # Specific test file
 pytest tests/test_checkout_flow.py
 ```
+
+## Test Report
+
+```bash
+pytest --html=report.html --self-contained-html
+```
+Open `report.html` in browser to view results.

@@ -1,12 +1,18 @@
 import requests
 from pathlib import Path
 import json
+# for loading variables from .env file
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 BASE_URL = "https://reqres.in/api"
-API_KEY = "free_user_3EKly1xOLEGiTYzBJl8uknHwczN"
+API_KEY = os.getenv("API_KEY")
 HEADERS = {"x-api-key": API_KEY}
 RESPONSE_TIME_LIMIT_MS = 2000  # 2 seconds — realistic limit for public API
 # 100ms - from the task, but for a public API over the Internet, the real limit is more
+
 
 def load_test_data():
     file_path = Path(__file__).parent.parent / "test_data" / "users.json"

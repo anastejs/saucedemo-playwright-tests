@@ -2,10 +2,19 @@ from pages.login_page import LoginPage          # for login functionality
 from pages.products_page import ProductsPage
 from playwright.sync_api import Page, expect
 import pytest    # for feature-based test parametrization
+# for loading variables from .env file
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+STANDARD_USERNAME = os.getenv("STANDARD_USERNAME")
+STANDARD_PASSWORD = os.getenv("STANDARD_PASSWORD")
+
 
 @pytest.fixture
 def login(page: Page):
-    LoginPage(page).login("standard_user", "secret_sauce")
+    LoginPage(page).login(STANDARD_USERNAME, STANDARD_PASSWORD)
     return page
 
 # TC-02: Product sorting functionality

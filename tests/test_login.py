@@ -1,13 +1,24 @@
 from pages.login_page import LoginPage
 from playwright.sync_api import Page, expect
+# for loading variables from .env file
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+STANDARD_USERNAME = os.getenv("STANDARD_USERNAME")
+STANDARD_PASSWORD = os.getenv("STANDARD_PASSWORD")
+LOCKED_USERNAME = os.getenv("LOCKED_USERNAME")
+INVALID_PASSWORD = os.getenv("INVALID_PASSWORD")
+
 
 # could be done with
 # @pytest.mark.parametrize("username, password, expected_url, expected_error", [...])
 
 # TC-01a: Successful login
 def test_successful_login(page: Page):
-    username = "standard_user"
-    password = "secret_sauce"
+    username = STANDARD_USERNAME
+    password = STANDARD_PASSWORD
     login_page = LoginPage(page)
     login_page.login(username, password)
 
@@ -16,8 +27,8 @@ def test_successful_login(page: Page):
 
 # TC-01b: Locked out user sees an error message
 def test_locked_out_user(page: Page):
-    username = "locked_out_user"
-    password = "secret_sauce"
+    username = LOCKED_USERNAME
+    password = STANDARD_PASSWORD
     login_page = LoginPage(page)
     login_page.login(username, password)
 
@@ -27,8 +38,8 @@ def test_locked_out_user(page: Page):
 
 # TC-01c: Failed login
 def test_failed_login(page: Page):
-    username = "standard_user"
-    password = "yapayapa"
+    username = STANDARD_USERNAME
+    password = INVALID_PASSWORD
     login_page = LoginPage(page)
     login_page.login(username, password)
 

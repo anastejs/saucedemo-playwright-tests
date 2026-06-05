@@ -1,10 +1,16 @@
 import json
+import math
 import requests
-# import pytest
+# for loading variables from .env file
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 BASE_URL = "https://reqres.in/api"
-API_KEY = "free_user_3EKly1xOLEGiTYzBJl8uknHwczN"
+API_KEY = os.getenv("API_KEY")
 HEADERS = {"x-api-key": API_KEY}
+
 
 # TC-01: GET list users
 def test_get_users():
@@ -32,7 +38,10 @@ def test_get_users():
     total_from_response = body["total"]
     per_page = body["per_page"]
     total_pages = body["total_pages"]
+    # it works only if total_from_response is divisible by per_page (6 users per page * 2 pages = 12 total users)
     assert per_page * total_pages == total_from_response, f"Expected {per_page} * {total_pages} = {total_from_response}"
+    # otherwise we calculate like this (round up the number of pages)
+    assert math.ceil(total_from_response / per_page) == total_pages, f"Expected {math.ceil(total_from_response / per_page)} pages, got {total_pages}"
 
     # verify - data types for each user in data
     for user in data:

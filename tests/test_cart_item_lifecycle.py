@@ -4,11 +4,19 @@ from pages.login_page import LoginPage
 from pages.products_page import ProductsPage
 from pages.cart_page import CartPage
 from playwright.sync_api import Page, expect
+# for loading variables from .env file
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+STANDARD_USERNAME = os.getenv("STANDARD_USERNAME")
+STANDARD_PASSWORD = os.getenv("STANDARD_PASSWORD")
 
 
 # TC-04: Verify cart item lifecycle and badge state updates
 def test_cart_add_and_remove(page: Page):
-    LoginPage(page).login("standard_user", "secret_sauce")
+    LoginPage(page).login(STANDARD_USERNAME, STANDARD_PASSWORD)
     products_page = ProductsPage(page)
     cart_page = CartPage(page)
 
