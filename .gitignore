@@ -22,4 +22,5 @@ Thumbs.db
 *.log
 
 # Test results
+test-results
 test-results/playwright/

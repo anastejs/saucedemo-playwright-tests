@@ -1,6 +1,34 @@
 # saucedemo-playwright-tests
 
-Automated tests for [saucedemo.com](https://www.saucedemo.com/) (UI) and [reqres.in](https://reqres.in/) (API)
+Automated test suite for [saucedemo.com](https://www.saucedemo.com/) (UI) and [reqres.in](https://reqres.in/) (API)
+
+## 📁 Project Structure
+
+```
+saucedemo-playwright-tests/
+├── .github/
+│   └── workflows/
+│       └── test.yml        # CI pipeline configuration
+├── api-tests/
+│   ├── test_get_users.py   
+│   └── test_post_user.py 
+├── pages/                 
+│   ├── cart_page.py
+│   ├── login_page.py
+│   └── products_page.py
+├── test_data/
+│   └── users.json          # test data for POST /users  
+├── tests/                  # UI tests
+│   ├── test_cart_item_lifecycle.py
+│   ├── test_checkout_flow.py
+│   ├── test_login.py
+│   └── test_sorting_products.py
+├── .env.example            # environment variables template
+├── .gitignore
+├── pytest.ini
+└── requirements.txt
+```
+
 
 ## Installation
 
@@ -22,8 +50,7 @@ playwright install
 ## Configuration
 
 Add your API key from [app.reqres.in](https://app.reqres.in/api-keys) to:
-- `api-tests/test_get_users.py` → `API_KEY = "..."`
-- `api-tests/test_post_user.py` → `API_KEY = "..."`
+- `.env` → `API_KEY = ...`
 
 ## Running Tests (locally)
 
@@ -43,7 +70,9 @@ pytest tests/test_checkout_flow.py
 
 ## Test Report
 
+Generate a local report after running tests:
+
 ```bash
-pytest --html=report.html --self-contained-html
+pytest --html=test-results/report.html --self-contained-html
 ```
 Open `report.html` in browser to view results.
