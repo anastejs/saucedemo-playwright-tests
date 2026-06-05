@@ -8,7 +8,6 @@ venv/
 
 # Tests
 .pytest_cache/
-test-results/
 playwright-report/
 
 # IDE
