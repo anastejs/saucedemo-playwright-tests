@@ -24,4 +24,12 @@ jobs:
           run: python -m playwright install chromium --with-deps  
 
         - name: Run tests
+          env:
+            STANDARD_USERNAME: ${{ secrets.STANDARD_USERNAME }}
+            STANDARD_PASSWORD: ${{ secrets.STANDARD_PASSWORD }}
+            LOCKED_USERNAME: ${{ secrets.LOCKED_USERNAME }}
+            LOCKED_PASSWORD: ${{ secrets.LOCKED_PASSWORD }}
+            INVALID_USERNAME: ${{ secrets.INVALID_USERNAME }}
+            INVALID_PASSWORD: ${{ secrets.INVALID_PASSWORD }}
+            API_KEY: ${{ secrets.API_KEY }}
           run: pytest 
