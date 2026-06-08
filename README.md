@@ -1,6 +1,6 @@
 # saucedemo-playwright-tests
 
-UI and API test automation framework for [saucedemo.com](https://www.saucedemo.com/) (UI) and [reqres.in](https://reqres.in/) (API) built with Python, Pytest and Playwright.
+Python-based test automation framework for [saucedemo.com](https://www.saucedemo.com/) (UI) and [reqres.in](https://reqres.in/) (API) built with Python, Pytest and Playwright.
 
 ## 📁 Project Structure
 
