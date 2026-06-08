@@ -15,8 +15,6 @@ Precondition:
 | 1. Enter valid username and password | Fields are filled |
 | 2. Click Login button | Redirected to `/inventory.html` |
 
----
-
 **TC-01b**: Locked Out User
 
 Precondition:
@@ -28,8 +26,6 @@ Precondition:
 | 1. Enter locked user credentials | Fields are filled |
 | 2. Click Login button | Error message is visible: "Sorry, this user has been locked out" |
 
----
-
 **TC-01c**: Failed Login with Invalid Password
 
 Precondition:
@@ -40,7 +36,6 @@ Precondition:
 |---|---|
 | 1. Enter valid username and invalid password | Fields are filled |
 | 2. Click Login button | Error message is visible: "Epic sadface: Username and password do not match any user in this service" |
-
 
 ### TC-02 Product Sorting
 
@@ -55,8 +50,6 @@ Precondition:
 | 2. Select "Name (Z to A)" from sort dropdown | Products sorted alphabetically descending |
 | 3. Select "Price (low to high)" from sort dropdown | Products sorted by price ascending |
 | 4. Select "Price (high to low)" from sort dropdown | Products sorted by price descending |
-
-
 
 ### TC-03 Checkout Flow (happy path)
 
