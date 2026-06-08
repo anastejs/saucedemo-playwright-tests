@@ -1,6 +1,8 @@
 import requests
 from pathlib import Path
 import json
+# for varification createdAt timestamp - validating ISO 8601 timestamps
+from datetime import datetime, timezone
 # for loading variables from .env file
 import os
 from dotenv import load_dotenv
@@ -41,6 +43,11 @@ def test_post_create_user():
 
         # verify - response contains createdAt timestamp
         assert "createdAt" in body, f"Expected 'createdAt' in response, got {body}"
+
+        # verify - response contains createdAt timestamp with valid ISO 8601 format
+        assert "createdAt" in body, f"Expected 'createdAt' in response, got {body}"
+        created_at = datetime.fromisoformat(body["createdAt"].replace("Z", "+00:00"))
+        assert created_at <= datetime.now(timezone.utc), f"createdAt is in the future: {body['createdAt']}"
 
         # verify - response time
         response_time_ms = response.elapsed.total_seconds() * 1000

@@ -38,6 +38,9 @@ def test_get_users():
     total_from_response = body["total"]
     per_page = body["per_page"]
     total_pages = body["total_pages"]
+
+    # verify - actual number of users returned matches per_page
+    assert len(data) == per_page, f"Expected {per_page} users in data, got {len(data)}"
     # it works only if total_from_response is divisible by per_page (6 users per page * 2 pages = 12 total users)
     assert per_page * total_pages == total_from_response, f"Expected {per_page} * {total_pages} = {total_from_response}"
     # otherwise we calculate like this (round up the number of pages)
