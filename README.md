@@ -1,6 +1,6 @@
 # saucedemo-playwright-tests
 
-Automated test suite for [saucedemo.com](https://www.saucedemo.com/) (UI) and [reqres.in](https://reqres.in/) (API)
+UI and API test automation framework for [saucedemo.com](https://www.saucedemo.com/) (UI) and [reqres.in](https://reqres.in/) (API) built with Python, Pytest and Playwright.
 
 ## 📁 Project Structure
 
@@ -25,7 +25,7 @@ saucedemo-playwright-tests/
 │   └── test_sorting_products.py
 ├── .env.example            # environment variables template
 ├── .gitignore
-├── TEST_CASES.md 
+├── TEST_CASES.md           # structured test case documentation
 ├── pytest.ini
 └── requirements.txt
 ```
