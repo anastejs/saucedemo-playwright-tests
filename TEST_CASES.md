@@ -2,9 +2,7 @@
 
 ## UI Tests — [saucedemo.com](https://www.saucedemo.com/)
 
----
-
-## TC-01 Login Functionality
+### TC-01 Login Functionality
 
 **TC-01a**: Successful Login
 
@@ -43,9 +41,8 @@ Precondition:
 | 1. Enter valid username and invalid password | Fields are filled |
 | 2. Click Login button | Error message is visible: "Epic sadface: Username and password do not match any user in this service" |
 
----
 
-## TC-02 Product Sorting
+### TC-02 Product Sorting
 
 Precondition:
 - User is logged in
@@ -59,9 +56,9 @@ Precondition:
 | 3. Select "Price (low to high)" from sort dropdown | Products sorted by price ascending |
 | 4. Select "Price (high to low)" from sort dropdown | Products sorted by price descending |
 
----
 
-## TC-03 Checkout Flow (happy path)
+
+### TC-03 Checkout Flow (happy path)
 
 Precondition:
 - User is logged in
@@ -77,9 +74,7 @@ Precondition:
 | 6. Click "Finish" | Confirmation message "Thank you for your order!" is visible |
 | 7. Click "Back Home" | Redirected to `/inventory.html` |
 
----
-
-## TC-04 Cart Item Lifecycle
+### TC-04 Cart Item Lifecycle
 
 Precondition:
 - User is logged in
@@ -96,9 +91,7 @@ Precondition:
 
 ## API Tests — [reqres.in](https://reqres.in/)
 
----
-
-## TC-05 GET /users — List Users
+### TC-05 GET /users — List Users
 
 Precondition:
 - Valid API key is available
@@ -113,9 +106,7 @@ Precondition:
 | 5. Check pagination: `ceil(total / per_page)` | Result equals `total_pages` |
 | 6. Check data types  present in the response | `id` (int), `email` (str), `first_name` (str), `last_name` (str), `avatar` (str) |
 
----
-
-## TC-06 POST /users — Create User
+### TC-06 POST /users — Create User
 
 Precondition:
 - Valid API key is available
