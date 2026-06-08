@@ -12,7 +12,7 @@ Precondition:
 
 | Step | Expected Result |
 |---|---|
-| 1. Enter valid username and password | Fields are filled |
+| 1. Enter valid username and password | Input fields contain entered values |
 | 2. Click Login button | Redirected to `/inventory.html` |
 
 **TC-01b**: Locked Out User
@@ -23,18 +23,18 @@ Precondition:
 
 | Step | Expected Result |
 |---|---|
-| 1. Enter locked user credentials | Fields are filled |
+| 1. Enter locked user credentials | Input fields contain entered values |
 | 2. Click Login button | Error message is visible: "Sorry, this user has been locked out" |
 
 **TC-01c**: Failed Login with Invalid Password
 
 Precondition:
 - User is on the login page
-- User has invalid login or password
+- User has a valid username and an invalid password
 
 | Step | Expected Result |
 |---|---|
-| 1. Enter valid username and invalid password | Fields are filled |
+| 1. Enter valid username and invalid password | Input fields contain entered values |
 | 2. Click Login button | Error message is visible: "Epic sadface: Username and password do not match any user in this service" |
 
 ### TC-02 Product Sorting
@@ -71,6 +71,7 @@ Precondition:
 
 Precondition:
 - User is logged in
+- Cart is empty (cleared automatically before test)
 - At least 2 products are available in the inventory
 
 | Step | Expected Result |
@@ -94,10 +95,10 @@ Precondition:
 |---|---|
 | 1. Send `GET /api/users?page=2` | Status code is `200 OK` |
 | 2. Check `total` number of users | Value equals `12` |
-| 3. Check last_name of the first and second users | Values are "Lawson" and "Ferguson" respectively |
+| 3. Check last_name values of users at indexes 0 and 1 | Values are "Lawson" and "Ferguson" respectively |
 | 4. Check `len(data)` vs `per_page` | Number of returned users matches `per_page` value |
 | 5. Check pagination: `ceil(total / per_page)` | Result equals `total_pages` |
-| 6. Check data types  present in the response | `id` (int), `email` (str), `first_name` (str), `last_name` (str), `avatar` (str) |
+| 6. Verify response field data types | `id` (int), `email` (str), `first_name` (str), `last_name` (str), `avatar` (str) |
 
 ### TC-06 POST /users — Create User
 
@@ -111,5 +112,5 @@ Precondition:
 | 1. Send `POST /api/users` with `name` and `job` | Status code is `201 Created` |
 | 2. Check response body contains `id` | Field `id` is present |
 | 3. Check response body contains `createdAt` | Field `createdAt` is present and has valid ISO 8601 format |
-| 4. Check response time | Response time is under 2000ms |
+| 4. Check response time | Response is received within 2 seconds |
 | 5. Check response schema | `id` (str), `name` (str), `job` (str), `createdAt` (str) |

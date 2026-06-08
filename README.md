@@ -25,6 +25,7 @@ saucedemo-playwright-tests/
 │   └── test_sorting_products.py
 ├── .env.example            # environment variables template
 ├── .gitignore
+├── TEST_CASES.md 
 ├── pytest.ini
 └── requirements.txt
 ```
