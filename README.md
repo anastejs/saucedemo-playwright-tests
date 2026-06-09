@@ -1,5 +1,15 @@
 # saucedemo-playwright-tests
 
+![Python](https://img.shields.io/badge/Python-3.13-B5D5F5?style=flat&logo=python&logoColor=555555)
+![Playwright](https://img.shields.io/badge/Playwright-1.60-B5F5D5?style=flat&logo=playwright&logoColor=555555)
+![pytest](https://img.shields.io/badge/pytest-9.0.3-F5D5B5?style=flat&logo=pytest&logoColor=555555)
+![requests](https://img.shields.io/badge/requests-2.34.2-F5B5D5?style=flat&logo=python&logoColor=555555)
+![python-dotenv](https://img.shields.io/badge/python--dotenv-1.2.2-F5F5B5?style=flat&logo=dotenv&logoColor=555555)
+![pytest-html](https://img.shields.io/badge/pytest--html-4.2.0-D5B5F5?style=flat&logo=pytest&logoColor=555555)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI%2FCD-B5D5F5?style=flat&logo=githubactions&logoColor=555555)
+![POM](https://img.shields.io/badge/Pattern-Page_Object_Model-D5F5B5?style=flat&logoColor=555555)
+![Data-Driven](https://img.shields.io/badge/Pattern-Data_Driven-F5D5F5?style=flat&logoColor=555555)
+
 Python-based test automation framework for [saucedemo.com](https://www.saucedemo.com/) (UI) and [reqres.in](https://reqres.in/) (API) built with Python, Pytest and Playwright.
 
 ## 📁 Project Structure
