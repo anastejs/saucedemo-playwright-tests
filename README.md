@@ -60,8 +60,11 @@ playwright install
 
 ## Configuration
 
-Add your API key from [app.reqres.in](https://app.reqres.in/api-keys) to:
-- `.env` → `API_KEY = ...`
+Create a `.env` file in the project root and add your API key from [app.reqres.in](https://app.reqres.in/api-keys):
+
+```env
+API_KEY=your_api_key
+```
 
 ## Running Tests (locally)
 
