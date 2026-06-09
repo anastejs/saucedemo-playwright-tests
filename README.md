@@ -10,16 +10,6 @@
 ![POM](https://img.shields.io/badge/Pattern-Page_Object_Model-D5F5B5?style=flat&logoColor=555555)
 ![Data-Driven](https://img.shields.io/badge/Pattern-Data_Driven-F5D5F5?style=flat&logoColor=555555)
 
-![Python](https://img.shields.io/badge/Python-3.13-FFDFD3?style=flat&logo=python&logoColor=555555)
-![Playwright](https://img.shields.io/badge/Playwright-1.60-D3F0FF?style=flat&logo=playwright&logoColor=555555)
-![pytest](https://img.shields.io/badge/pytest-9.0.3-D3FFE8?style=flat&logo=pytest&logoColor=555555)
-![requests](https://img.shields.io/badge/requests-2.34.2-FFF3D3?style=flat&logo=python&logoColor=555555)
-![python-dotenv](https://img.shields.io/badge/python--dotenv-1.2.2-EDD3FF?style=flat&logo=dotenv&logoColor=555555)
-![pytest-html](https://img.shields.io/badge/pytest--html-4.2.0-FFD3EE?style=flat&logo=pytest&logoColor=555555)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI%2FCD-D3E8FF?style=flat&logo=githubactions&logoColor=555555)
-![POM](https://img.shields.io/badge/Pattern-Page_Object_Model-D3FFF5?style=flat&logoColor=555555)
-![Data-Driven](https://img.shields.io/badge/Pattern-Data_Driven-FFDFF5?style=flat&logoColor=555555)
-
 Python-based test automation framework for [saucedemo.com](https://www.saucedemo.com/) (UI) and [reqres.in](https://reqres.in/) (API) built with Python, Pytest and Playwright.
 
 ## 📁 Project Structure
